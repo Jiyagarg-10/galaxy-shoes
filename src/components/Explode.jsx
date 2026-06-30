@@ -178,7 +178,7 @@ export default function Explode() {
             border: 1px solid rgba(255,255,255,0.08) !important;
           }
           .lbl-upper { left: 6px !important; right: auto !important; top: 6% !important; transform: none !important; }
-          .lbl-mid   { right: 6px !important; left: auto !important; top: 56% !important; transform: none !important; }
+          .lbl-mid   { right: 6px !important; left: auto !important; top: 42% !important; transform: none !important; }
           .lbl-out   { left: 6px !important; right: auto !important; top: 88% !important; transform: none !important; }
         }
       `}</style>
