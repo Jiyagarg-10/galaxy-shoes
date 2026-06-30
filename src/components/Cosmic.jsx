@@ -198,7 +198,8 @@ export default function Cosmic() {
           position: 'absolute', top: 'calc(50% + clamp(120px, 20vw, 220px))', left: '50%',
           transform: 'translateX(-50%)', zIndex: 13, textAlign: 'center', pointerEvents: 'none',
         }}>
-          <p style={{ fontFamily: "'Space Mono', monospace", fontSize: 9, letterSpacing: '4px',
+          <p style={{ fontFamily: "'Space Mono', monospace", fontSize: 'clamp(7px, 1.8vw, 9px)',
+            letterSpacing: 'clamp(1.5px, 1vw, 4px)',
             color: 'rgba(240,240,255,0.35)', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
             Orbit I · Flagship
           </p>
@@ -206,10 +207,11 @@ export default function Cosmic() {
 
         {/* Bottom caption */}
         <div style={{
-          position: 'absolute', bottom: '7%', left: '50%',
+          position: 'absolute', bottom: '7%', left: '50%', maxWidth: '94vw',
           transform: 'translateX(-50%)', zIndex: 13, textAlign: 'center', pointerEvents: 'none',
         }}>
-          <p style={{ fontFamily: "'Space Mono', monospace", fontSize: 10, letterSpacing: '8px',
+          <p style={{ fontFamily: "'Space Mono', monospace", fontSize: 'clamp(7px, 2vw, 10px)',
+            letterSpacing: 'clamp(2px, 1.8vw, 8px)',
             color: 'rgba(240,240,255,0.28)', textTransform: 'uppercase', whiteSpace: 'nowrap', marginBottom: 6 }}>
             Six Models · One Universe
           </p>
@@ -218,9 +220,10 @@ export default function Cosmic() {
 
         {/* HUD */}
         <div style={{
-          position: 'absolute', bottom: '12%', left: '50%', transform: 'translateX(-50%)',
-          zIndex: 13, fontFamily: "'Space Mono', monospace", fontSize: 10,
-          letterSpacing: '7px', color: 'rgba(240,240,255,0.18)',
+          position: 'absolute', bottom: '12%', left: '50%', maxWidth: '94vw',
+          transform: 'translateX(-50%)',
+          zIndex: 13, fontFamily: "'Space Mono', monospace", fontSize: 'clamp(6px, 1.7vw, 10px)',
+          letterSpacing: 'clamp(1px, 1.4vw, 7px)', color: 'rgba(240,240,255,0.18)',
           textTransform: 'uppercase', whiteSpace: 'nowrap', pointerEvents: 'none',
         }}>
           GALAXY ORBIT I &nbsp;—&nbsp; FLAGSHIP 2025
