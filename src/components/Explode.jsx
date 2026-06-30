@@ -161,11 +161,27 @@ export default function Explode() {
     return () => ctx.revert();
   }, []);
 
-  const SHOE_W = 'clamp(300px, 48vw, 520px)';
-  const SHOE_H = 'clamp(160px, 26vw, 280px)';
+  const SHOE_W = 'clamp(260px, 48vw, 520px)';
+  const SHOE_H = 'clamp(140px, 26vw, 280px)';
 
   return (
     <section ref={sectionRef} style={{ height: '300vh', background: 'var(--bg)' }}>
+      <style>{`
+        @media (max-width: 760px) {
+          .explode-lbl {
+            font-size: 7px !important;
+            letter-spacing: 1.5px !important;
+            gap: 5px !important;
+            background: rgba(3,3,20,0.6) !important;
+            padding: 4px 9px !important;
+            border-radius: 100px !important;
+            border: 1px solid rgba(255,255,255,0.08) !important;
+          }
+          .lbl-upper { left: 6px !important; right: auto !important; top: 6% !important; transform: none !important; }
+          .lbl-mid   { right: 6px !important; left: auto !important; top: 56% !important; transform: none !important; }
+          .lbl-out   { left: 6px !important; right: auto !important; top: 88% !important; transform: none !important; }
+        }
+      `}</style>
       <div style={{ position: 'sticky', top: 0, height: '100vh', overflow: 'hidden',
         display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 
@@ -192,15 +208,15 @@ export default function Explode() {
           </div>
 
           {/* Labels */}
-          <div ref={lblUpRef} style={{ ...LBL, right: 'calc(100% + 24px)', top: '12%', transform: 'translateX(-20px)' }}>
+          <div ref={lblUpRef} className="explode-lbl lbl-upper" style={{ ...LBL, right: 'calc(100% + 24px)', top: '12%', transform: 'translateX(-20px)' }}>
             <span style={{ color: '#ff6535' }}>—</span>
             <span>Orbit Foam Upper</span>
           </div>
-          <div ref={lblMidRef} style={{ ...LBL, left: 'calc(100% + 24px)', top: '60%', transform: 'translateX(20px)' }}>
+          <div ref={lblMidRef} className="explode-lbl lbl-mid" style={{ ...LBL, left: 'calc(100% + 24px)', top: '60%', transform: 'translateX(20px)' }}>
             <span>AeroMax Midsole</span>
             <span style={{ color: '#ff6535' }}>—</span>
           </div>
-          <div ref={lblOutRef} style={{ ...LBL, right: 'calc(100% + 24px)', top: '90%', transform: 'translateX(-20px)' }}>
+          <div ref={lblOutRef} className="explode-lbl lbl-out" style={{ ...LBL, right: 'calc(100% + 24px)', top: '90%', transform: 'translateX(-20px)' }}>
             <span style={{ color: '#ff6535' }}>—</span>
             <span>Carbon Grip Outsole</span>
           </div>
